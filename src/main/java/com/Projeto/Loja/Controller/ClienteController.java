@@ -38,7 +38,7 @@ public class ClienteController {
     }
 
     @GetMapping("/buscarnomeemail/{nome}/{email}")
-    public List<Cliente> buscarNomeEmail(String nome, String email){
+    public List<Cliente> buscarNomeEmail(@PathVariable("nome") String nome, @PathVariable("email") String email){
         return clRepo.findByNomeEmail(nome, email);
     }
 
